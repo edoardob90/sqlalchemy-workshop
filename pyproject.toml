@@ -12,10 +12,22 @@ authors = [
   { name = "Aya Elsayed", email = "ayah.ehab11@gmail.com" },
   { name = "Rhythm Patel", email = "rhythmkumar18083@iiitd.ac.in" },
 ]
-dependencies = []
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "sqlalchemy",
+  "aiosqlite",
+  "greenlet",
+]
 
 [project.optional-dependencies]
-dev = ["ruff"]
+dev = [
+  "ruff",
+]
 
 [tool.setuptools.packages.find]
-where = ["marketsvc"]
+where = ["."]
+include = ["marketsvc*"]
+
+[tool.uv]
+dev-dependencies = []
